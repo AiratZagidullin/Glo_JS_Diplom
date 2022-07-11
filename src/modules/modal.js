@@ -10,9 +10,17 @@ const modal = () => {
         })
     })
 
-    console.log(modal)
-    console.log(modalOverlay)
-    console.log(buttons)
+    modalOverlay.addEventListener('click', () => {
+        modal.style.display = 'none'
+        modalOverlay.style.display = 'none'
+    })
+
+    modal.addEventListener('click', (e) => {
+        if (e.target.closest('.modal-close')) {
+            modal.style.display = 'none'
+            modalOverlay.style.display = 'none'
+        }
+    })
 }
 
 export default modal
