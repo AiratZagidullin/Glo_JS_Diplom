@@ -1,9 +1,14 @@
 const slider = () => {
     const sliderBlock = document.querySelector('.top-slider')
     const sliderItems = document.querySelectorAll('.item')
+    const sliderText = document.querySelectorAll('.table')
 
     let currentSlide = 0
     let interval
+
+    sliderText.forEach(text => {
+        text.classList.add('active')
+    })
 
     for (let i = 1; i < sliderItems.length; i++) {
         sliderItems[i].style.display = 'none'
@@ -107,7 +112,7 @@ const slider = () => {
     }, true)
 
     createDots()
-    startSlide()
+    // startSlide()
 }
 
 export default slider
