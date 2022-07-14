@@ -112,7 +112,7 @@ const slider = () => {
     }, true)
 
     createDots()
-    // startSlide()
+    startSlide()
 }
 
 export default slider
