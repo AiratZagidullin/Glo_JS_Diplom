@@ -39,8 +39,6 @@ const sendForm = () => {
             formBody[key] = val
         })
 
-        console.log('submit')
-
         if (validate(formInput)) {
             sendData(formBody)
                 .then(data => {
